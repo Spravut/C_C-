@@ -6,16 +6,18 @@ struct Student {
     float GPA;
 };
 
-int nain(){
+int main(){
     int count;
     printf("Введите количество студентов: ");
     scanf("%d", &count);
-    // struct Student student[count];
+    struct Student students[count];
 
     for (int i = 0; i < count; i++) {
-        struct Student student;
-        scanf("%s %d %f", student.Name, student.Age, student.GPA);
-        printf("Name: %s\nAge: %d\nGPA: %lf\n");
+        printf("Введите Имя, возраст и средний балл студента %d: \n", i+1);
+        scanf("%s %d %f", students[i].Name, &students[i].Age, &students[i].GPA);
     }
-    
-
+    for (int i = 0; i < count; i++) {
+        printf("Name: %s\nAge: %d\nGPA: %.1lf\n\n", students[i].Name, students[i].Age, students[i].GPA);
+    }
+    return 0;
+}

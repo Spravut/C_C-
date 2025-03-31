@@ -300,7 +300,7 @@ int main() {
     }
 
     for (int i = 0; i < n; i++) {
-        printf("Name: %s\nAge: %d\nGPA: %.1f\n\n", students[i].name, students[i].age, students[i].gpa);
+        printf("\nName: %s\nAge: %d\nGPA: %.1f\n\n", students[i].name, students[i].age, students[i].gpa);
     }
 
     return 0;
